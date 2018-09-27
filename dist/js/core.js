@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
     $(this).parent().next('.content').slideToggle();
     $(this).text($(this).text() == '+' ? '-' : '+');
   });
+
   // Sticky Sidebar
   $('.sticky-sidebar').theiaStickySidebar({
     containerSelector: '.sticky-sidebar-parent',
-    additionalMarginTop: 10,
-    additionalMarginBottom: 20
+    additionalMarginTop: 30,
+    additionalMarginBottom: 30
   });
 
   // Filtering reviews - function

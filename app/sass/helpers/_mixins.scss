@@ -203,3 +203,12 @@
         border-left: $size solid $color;
     }
 }
+
+
+@mixin hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+      @content;
+    }
+  }

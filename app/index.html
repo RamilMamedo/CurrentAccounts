@@ -5,17 +5,13 @@
 <!-- Filter -->
 <section class="filter-by">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="filter-block">
-                    <span>Filter By:</span>
-                    <select name="" id="filter">
-                        <option value="all">Show All</option>
-                        <option value="visa">Visa</option>
-                        <option value="master_card">MasterCard</option>
-                    </select>
-                </div>
-            </div>
+        <div class="filter-block">
+            <span>Filter By:</span>
+            <select name="" id="filter">
+                <option value="all">Show All</option>
+                <option value="visa">Visa</option>
+                <option value="master_card">MasterCard</option>
+            </select>
         </div>
     </div>
 </section>
@@ -25,8 +21,8 @@
     <!-- Index Page -->
     <section class="index">
         <div class="container">
-            <div class="row sticky-sidebar-parent">
-                <div class="col-xl-9 col-lg-9 col-md-12 col-xs-12">
+            <div class="sticky-sidebar-parent">
+                <section class="index-main-side">
                     <!-- Partner's Table -->
                     <section class="partners-table">
                         <div class="partners-table--item" data-options="visa,master_card">
@@ -179,9 +175,9 @@
                         </p>
                     </section>
                     <!-- /Index Bottom Text -->
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-12 col-xs-12 sticky-sidebar">
-                    <!-- Aside -->
+                </section>
+                <!-- Aside -->
+                <section class="sticky-sidebar">
                     <aside class="index-aside">
                         <h4>FAQ Banques en ligne</h4>
                         <hr>
@@ -219,8 +215,8 @@
                             <hr>
                         </div>
                     </aside>
-                    <!-- /Aside -->
-                </div>
+                </section>
+                <!-- /Aside -->
             </div>
         </div>
     </section>
