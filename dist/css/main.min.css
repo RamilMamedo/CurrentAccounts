@@ -336,10 +336,10 @@ pre {
       max-width: 720px; } }
   @media (min-width: 892px) {
     .container {
-      max-width: 860px; } }
+      max-width: 890px; } }
   @media (min-width: 1100px) {
     .container {
-      max-width: 940px; } }
+      max-width: 970px; } }
 
 .container-fluid {
   width: 100%;
@@ -4842,7 +4842,7 @@ img {
   background-color: #fff;
   text-align: justify;
   font-size: 16px;
-  color: #343434; }
+  color: #3b4561; }
   .review-article-content h1 {
     font-size: 26px;
     font-weight: 700;
@@ -4888,6 +4888,7 @@ img {
 .header {
   background-color: #fff; }
   .header .navbar {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between; }
@@ -4970,12 +4971,14 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; }
+  .page-banner .row {
+    justify-content: center; }
   .page-banner h1 {
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 10px; }
   .page-banner h4 {
-    padding: 0 140px;
+    padding: 0 150px;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.5;
@@ -4993,6 +4996,7 @@ img {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    width: 100%;
     padding: 45px 0 40px; }
     .footer .navbar .navbar-logo {
       width: 220px; }
@@ -5016,10 +5020,13 @@ img {
         margin-right: 20px; }
         .footer .navbar .navbar-nav .footer-nav-item .footer-nav-link {
           color: #3b4561;
+          text-decoration: none;
           text-transform: uppercase;
           font-size: 14px;
           font-weight: 400;
           letter-spacing: 0.5px; }
+          .footer .navbar .navbar-nav .footer-nav-item .footer-nav-link:hover {
+            text-decoration: underline; }
       .footer .navbar .navbar-nav .footer-nav-item:last-child {
         margin-right: 0; }
 
@@ -5216,7 +5223,7 @@ img {
       position: absolute;
       z-index: 1;
       top: 0;
-      left: 0;
+      left: 24px;
       width: 116px; }
       .comparison .comparison-table .table-sections .top-info {
         border-left: none;
@@ -5261,7 +5268,7 @@ img {
       .comparison .comparison-table .comparison--items .comparison--cols {
         display: flex;
         justify-content: flex-start;
-        margin-left: 116px; }
+        margin-left: 140px; }
         .comparison .comparison-table .comparison--items .comparison--cols .product {
           position: relative;
           width: 160px;
@@ -5342,13 +5349,13 @@ img {
           font-size: 24px;
           letter-spacing: -0.6px;
           font-weight: 600;
-          color: #303030; }
+          color: #3b4561; }
       .articles .articles-grid .article-item .article-info p {
         font-weight: 400;
         text-align: justify;
         line-height: 1.38;
         letter-spacing: -0.4px;
-        color: #303030; }
+        color: #3b4561; }
         .articles .articles-grid .article-item .article-info p br {
           display: none; }
     .articles .articles-grid .article-item .article-details {
@@ -5360,7 +5367,7 @@ img {
       text-transform: uppercase; }
       .articles .articles-grid .article-item .article-details .article-btn {
         display: inline-block;
-        margin: 20px;
+        margin: 20px 0;
         padding: 5px 20px;
         color: rgba(0, 0, 0, 0.65);
         font-size: 14px;
@@ -5411,9 +5418,9 @@ img {
   margin: 30px 0 50px; }
   .info-pages .page-text {
     padding: 60px;
-    color: rgba(0, 0, 0, 0.65);
+    color: #3b4561;
     text-align: justify;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #fff;
     border: 1px solid #e8e8e8; }
     .info-pages .page-text h1 {
@@ -5430,15 +5437,22 @@ img {
 =====================================================
 */
 /*! Large Devices, Wide Screens */
+@media only screen and (max-width: 1100px) {
+  .reviews .partners-table .partners-table--item .partner-info {
+    max-width: 460px;
+    max-height: unset; } }
+
 /*! Medium Devices, Desktops */
 @media only screen and (max-width: 892px) {
+  .no-paddings {
+    padding-left: 30px !important;
+    padding-right: 30px !important; }
+  .navbar {
+    padding: 0 30px; }
   .filter-by {
     text-align: center; }
   .index {
     margin-right: 0; }
-    .index .no-paddings {
-      padding-left: 30px !important;
-      padding-right: 30px !important; }
     .index .sticky-sidebar-parent .col-xl-9 {
       order: 1; }
     .index .sticky-sidebar-parent .col-xl-3 {
@@ -5455,6 +5469,17 @@ img {
         margin: 1em 0; }
         .index .partners-table .partners-table--item .partner-deposit-options img:first-child {
           margin-bottom: unset; }
+  .reviews .partners-table .partners-table--item {
+    flex-direction: column; }
+    .reviews .partners-table .partners-table--item .partner-logo {
+      margin: 1em 0; }
+    .reviews .partners-table .partners-table--item .partner-info {
+      margin: 1em 0;
+      text-align: center; }
+      .reviews .partners-table .partners-table--item .partner-info .read-more {
+        display: block;
+        text-align: center;
+        margin: 1em; }
   .footer .navbar {
     flex-direction: column;
     align-items: center;
@@ -5464,14 +5489,35 @@ img {
     .footer .navbar .navbar-nav .footer-nav-item {
       display: block;
       text-align: center;
-      margin-right: 0; } }
+      margin-right: 0; }
+  .review .aside-partner-table {
+    margin: 20px 0; }
+  .review,
+  .article-inner {
+    margin: 20px 0 0; }
+  .aside-partner-table .partners-table .table-row .partner-links .partner-button {
+    margin: 23px 10px 7px; }
+  .aside-partner-table {
+    min-width: unset; }
+  .aside-partner-table .partners-table .table-row .partner-links .partner-button .btn {
+    padding: 8px 10px; }
+  .aside-partner-table .partner-item .partner-logo {
+    margin: 1em 0; }
+  .aside-partner-table .partner-item ul,
+  .aside-partner-table .partner-item .partner-link {
+    display: none; }
+  .aside-partner-table {
+    margin: 20px 0; } }
 
 /*! Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .page-banner {
     padding: 50px 0; }
+    .page-banner h1,
     .page-banner h4 {
-      padding: 0 15px; } }
+      padding: 0 30px; }
+  .articles-grid {
+    padding: 0 30px; } }
 
 /*! Extra Small Devices, Phones */
 /*! Custom, iPhone Retina */

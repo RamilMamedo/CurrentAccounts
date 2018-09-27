@@ -7,21 +7,33 @@
 /*! Large Devices, Wide Screens */
 
 @media only screen and (max-width: 1100px) {
+  .reviews {
+    .partners-table {
+      .partners-table--item {
+        .partner-info {
+          max-width: 460px;
+          max-height: unset;
+        }
+      }
+    }
+  }
 }
 
 /*! Medium Devices, Desktops */
 
 @media only screen and (max-width: 892px) {
+  .no-paddings {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .navbar {
+    padding: 0 30px;
+  }
   .filter-by {
     text-align: center;
   }
-
   .index {
     margin-right: 0;
-    .no-paddings {
-      padding-left: 30px !important;
-      padding-right: 30px !important;
-    }
     .sticky-sidebar-parent {
       .col-xl-9 {
         order: 1;
@@ -50,7 +62,25 @@
       }
     }
   }
-
+  .reviews {
+    .partners-table {
+      .partners-table--item {
+        flex-direction: column;
+        .partner-logo {
+          margin: 1em 0;
+        }
+        .partner-info {
+          margin: 1em 0;
+          text-align: center;
+          .read-more {
+            display: block;
+            text-align: center;
+            margin: 1em;
+          }
+        }
+      }
+    }
+  }
   .footer {
     .navbar {
       flex-direction: column;
@@ -70,6 +100,43 @@
       }
     }
   }
+  .review {
+    .aside-partner-table {
+      margin: 20px 0;
+    }
+  }
+  .review,
+  .article-inner {
+    margin: 20px 0 0;
+  }
+  .aside-partner-table
+    .partners-table
+    .table-row
+    .partner-links
+    .partner-button {
+    margin: 23px 10px 7px;
+  }
+  .aside-partner-table {
+    min-width: unset;
+  }
+  .aside-partner-table
+    .partners-table
+    .table-row
+    .partner-links
+    .partner-button
+    .btn {
+    padding: 8px 10px;
+  }
+  .aside-partner-table .partner-item .partner-logo {
+    margin: 1em 0;
+  }
+  .aside-partner-table .partner-item ul,
+  .aside-partner-table .partner-item .partner-link {
+    display: none;
+  }
+  .aside-partner-table {
+    margin: 20px 0;
+  }
 }
 
 /*! Small Devices, Tablets */
@@ -77,9 +144,13 @@
 @media only screen and (max-width: 768px) {
   .page-banner {
     padding: 50px 0;
+    h1,
     h4 {
-      padding: 0 15px;
+      padding: 0 30px;
     }
+  }
+  .articles-grid {
+    padding: 0 30px;
   }
 }
 

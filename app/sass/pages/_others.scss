@@ -58,7 +58,7 @@
       position: absolute;
       z-index: 1;
       top: 0;
-      left: 0;
+      left: 24px;
       width: 116px;
       .top-info {
         border-left: none;
@@ -112,7 +112,7 @@
       .comparison--cols {
         display: flex;
         justify-content: flex-start;
-        margin-left: 116px;
+        margin-left: 140px;
         .product {
           position: relative;
           width: 160px;
@@ -221,7 +221,7 @@
             font-size: 24px;
             letter-spacing: -0.6px;
             font-weight: $fw-600;
-            color: #303030;
+            color: #3b4561;
           }
         }
         p {
@@ -229,7 +229,7 @@
           text-align: justify;
           line-height: 1.38;
           letter-spacing: -0.4px;
-          color: #303030;
+          color: #3b4561;
           br {
             display: none;
           }
@@ -244,7 +244,7 @@
         text-transform: uppercase;
         .article-btn {
           display: inline-block;
-          margin: 20px;
+          margin: 20px 0;
           padding: 5px 20px;
           color: rgba(0, 0, 0, 0.65);
           font-size: $ftz-small;
@@ -309,9 +309,9 @@
   margin: 30px 0 50px;
   .page-text {
     padding: 60px;
-    color: rgba(0, 0, 0, 0.65);
+    color: #3b4561;
     text-align: justify;
-    font-size: $ftz-small;
+    font-size: $ftz-normal;
     background-color: $white;
     border: 1px solid #e8e8e8;
     h1 {
