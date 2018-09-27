@@ -1,0 +1,26 @@
+/*!
+=====================================================
+               =   Page Banner   =
+=====================================================
+*/
+
+.page-banner {
+  padding: 95px 0;
+  color: $white;
+  text-align: center;
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  h1 {
+    font-size: 50px;
+    font-weight: $fw-600;
+    margin-bottom: 10px;
+  }
+  h4 {
+    padding: 0 140px;
+    font-size: 20px;
+    font-weight: $fw-300;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+}

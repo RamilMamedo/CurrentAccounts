@@ -1,0 +1,55 @@
+@import '../vars';
+@import '../mixins';
+
+/*!
+=====================================================
+               =   Footer   =
+=====================================================
+*/
+
+.footer {
+  margin-top: 90px;
+  background-color: $white;
+  .navbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 45px 0 40px;
+    .navbar-logo {
+      width: 220px;
+      .footer-nav-logo {
+        display: inline-block;
+        img {
+          width: 220px;
+        }
+      }
+      .copyright {
+        display: block;
+        font-size: 12px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        font-weight: $fw-400;
+        text-align: center;
+        color: #47506b;
+      }
+    }
+    .navbar-nav {
+      padding: 0;
+      .footer-nav-item {
+        display: inline-block;
+        margin-right: 20px;
+        .footer-nav-link {
+          color: #3b4561;
+          text-transform: uppercase;
+          font-size: $ftz-small;
+          font-weight: $fw-400;
+          letter-spacing: 0.5px;
+        }
+      }
+      .footer-nav-item:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

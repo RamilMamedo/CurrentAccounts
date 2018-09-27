@@ -1,0 +1,18 @@
+@import 'libs';
+@import 'global';
+
+/*!
+=====================================================
+                 =   MainCSS   =
+=====================================================
+*/
+
+//  Partials
+@import 'partials/header';
+@import 'partials/banner';
+@import 'partials/footer';
+//  Pages
+@import 'pages/index';
+@import 'pages/others';
+//  Media
+@import 'responsive';
