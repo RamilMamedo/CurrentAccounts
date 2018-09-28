@@ -178,15 +178,10 @@ Scripts = () => {
         './app/libs/stickySidebar.js',
         './app/libs/comparisonTable.js',
         './app/libs/articles.js',
-        './app/libs/trunk.js',
-
-        // './app/libs/bootstrap/popper.min.js',
-        // './app/libs/bootstrap/bootstrap.min.js',
-        // './app/libs/swiper/swiper.min.js',
-        './app/js/core.js',
+        './dist/js/core.js',
       ])
       .pipe(concat('vendors.min.js'))
-      // .pipe(uglify()) // (Optional)
+      .pipe(uglify()) // (Optional)
       .on('error', message => {
         gutil.log(gutil.colors.red('[Error]'), message.toString());
       })

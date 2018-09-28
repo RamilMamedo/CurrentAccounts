@@ -126,6 +126,9 @@
     }
     .navbar-brand {
       padding: 35px 45px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .nav-list {
       .nav-item {
@@ -144,5 +147,14 @@
         }
       }
     }
+  }
+  &::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    content: '';
+    height: 100vh;
+    right: 100%;
+    position: absolute;
+    top: 0;
+    width: 20vw;
   }
 }

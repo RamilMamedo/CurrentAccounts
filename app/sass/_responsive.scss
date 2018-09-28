@@ -154,6 +154,12 @@
     margin: 1em 0;
     flex-direction: column;
   }
+  .mobile .navbar-brand .nav-logo img {
+    width: 30vw;
+  }
+  .mobile .navbar-brand {
+    padding: 35px;
+  }
 }
 
 /*! Custom, iPhone Retina */
