@@ -131,12 +131,12 @@ Fonts = () => {
 //  Compiling SASS, cutting unused CSS modules, adding prefixes, minifying and renaming the final file...
 gulp.task('style', () => {
   let plugins = [
-    // autoprefixer({browsers: ['last 5 version']}),
-    // cssnano({
-    //   safe: true,
-    //   discardComments: false,
-    //   minifyFontValues: false,
-    // }),
+    autoprefixer({browsers: ['last 5 version']}),
+    cssnano({
+      safe: true,
+      discardComments: false,
+      minifyFontValues: false,
+    }),
     // uncss({
     //   html: ['./dist/index.html'],
     //   ignore: ['.fade', '.active']
@@ -146,8 +146,8 @@ gulp.task('style', () => {
     gulp
       .src(paths.scssSrc)
       .pipe(sass({ outputStyle: 'expand' }))
-      // .pipe(purify(['./app/**/*.js', './app/**/*.html']))
-      // .pipe(cleanCSS({compatibility: "ie8"}))
+      .pipe(purify(['./app/**/*.js', './app/**/*.html']))
+      .pipe(cleanCSS({compatibility: "ie8"}))
       .pipe(postcss(plugins))
       .on('error', message => {
         gutil.log(gutil.colors.red('[Error]'), message.toString());
@@ -178,6 +178,7 @@ Scripts = () => {
         './app/libs/stickySidebar.js',
         './app/libs/comparisonTable.js',
         './app/libs/articles.js',
+        './app/libs/trunk.js',
 
         // './app/libs/bootstrap/popper.min.js',
         // './app/libs/bootstrap/bootstrap.min.js',

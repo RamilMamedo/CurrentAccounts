@@ -24,6 +24,9 @@
       line-height: 1.5;
       font-size: 20px;
       font-weight: $fw-300;
+      @media only screen and (max-width: 768px) {
+        padding: 0 50px;
+      }
     }
   }
 }

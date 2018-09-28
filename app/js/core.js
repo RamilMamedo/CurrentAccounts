@@ -5,10 +5,16 @@ document.addEventListener('DOMContentLoaded', function() {
     'color: #99160a; font-size: 38px; text-shadow: -1px 0 #94969a, 0 1px #94969a, 1px 0 #94969a, 0 -1px #94969a;'
   );
   // Hamburger
-  $('.hamburger').click(function() {
+  $('.hamburger').on('touchstart click', function(e) {
+    e.preventDefault();
     $(this).toggleClass('active');
+    console.log($(this));
+    console.log($(e.target));
+    $('.mobile').show('slow');
+
     return false;
   });
+
   // Filter
   $('#filter').change(function() {
     let selectedID = $(this)[0].selectedIndex;
@@ -27,15 +33,48 @@ document.addEventListener('DOMContentLoaded', function() {
     $(this).text($(this).text() == '+' ? '-' : '+');
   });
 
-
   // Sticky Sidebar
   $('.sticky-sidebar').theiaStickySidebar({
     containerSelector: '.sticky-sidebar-parent',
-    additionalMarginTop: 30,
+    additionalMarginTop: 10,
     additionalMarginBottom: 30
   });
 
+  $('#stars li')
+    .on('mouseover', function() {
+      let onStar = parseInt($(this).data('value'), 10);
+      $(this)
+        .parent()
+        .children('li.star')
+        .each(function(e) {
+          if (e < onStar) {
+            $(this).addClass('hover');
+          } else {
+            $(this).removeClass('hover');
+          }
+        });
+    })
+    .on('mouseout', function() {
+      $(this)
+        .parent()
+        .children('li.star')
+        .each(function(e) {
+          $(this).removeClass('hover');
+        });
+    });
 
+  $('#stars li').on('click', function() {
+    let onStar = parseInt($(this).data('value'), 10);
+    let stars = $(this)
+      .parent()
+      .children('li.star');
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+  });
 
   // Filtering reviews - function
   function filterRowsBy(options) {

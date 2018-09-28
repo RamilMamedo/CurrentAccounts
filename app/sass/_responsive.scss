@@ -1,3 +1,5 @@
+@import 'helpers/helpers';
+
 /*!
 =====================================================
                =   Media Queries  =
@@ -5,13 +7,42 @@
 */
 
 /*! Large Devices, Wide Screens */
-
 @media only screen and (max-width: 1100px) {
+  .filter-by {
+    text-align: center;
+  }
+  .index {
+    .index-main-side,
+    .index-aside {
+      width: 100%;
+    }
+    .index-aside {
+      margin-left: unset;
+    }
+  }
+  .review-article-content,
+  .sticky-sidebar {
+    width: 100%;
+  }
+  .review-inner,
+  .article-inner {
+    .aside-partner-table {
+      width: 100%;
+      margin-top: 10px;
+      margin-left: unset;
+      .partner-item ul {
+        list-style: none;
+      }
+      .partners-table h4 {
+        text-align: center;
+      }
+    }
+  }
   .reviews {
     .partners-table {
       .partners-table--item {
         .partner-info {
-          max-width: 460px;
+          max-width: 450px;
           max-height: unset;
         }
       }
@@ -20,32 +51,45 @@
 }
 
 /*! Medium Devices, Desktops */
-
 @media only screen and (max-width: 892px) {
-  .no-paddings {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-  .navbar {
-    padding: 0 30px;
-  }
-  .filter-by {
-    text-align: center;
-  }
-  .index {
-    margin-right: 0;
-    .sticky-sidebar-parent {
-      .col-xl-9 {
-        order: 1;
+  .header {
+    .navbar {
+      .navbar-nav {
+        display: none;
       }
-      .col-xl-3 {
-        order: 2;
-        .index-aside {
-          width: 100%;
-          margin: 0 auto;
+    }
+  }
+  .reviews {
+    .partners-table {
+      .partners-table--item {
+        flex-direction: column;
+        .partner-info {
+          margin: 2em 0;
+          text-align: center;
+          a {
+            display: block;
+            text-align: center !important;
+          }
         }
       }
     }
+  }
+}
+
+/*! Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .header,
+  .footer,
+  .index,
+  .articles,
+  .review-inner,
+  .article-inner,
+  .reviews,
+  .info-pages,
+  .comparison {
+    padding: 0 30px;
+  }
+  .index {
     .partners-table {
       .partners-table--item {
         flex-direction: column;
@@ -62,25 +106,7 @@
       }
     }
   }
-  .reviews {
-    .partners-table {
-      .partners-table--item {
-        flex-direction: column;
-        .partner-logo {
-          margin: 1em 0;
-        }
-        .partner-info {
-          margin: 1em 0;
-          text-align: center;
-          .read-more {
-            display: block;
-            text-align: center;
-            margin: 1em;
-          }
-        }
-      }
-    }
-  }
+
   .footer {
     .navbar {
       flex-direction: column;
@@ -100,48 +126,7 @@
       }
     }
   }
-  .review {
-    .aside-partner-table {
-      margin: 20px 0;
-    }
-  }
-  .review,
-  .article-inner {
-    margin: 20px 0 0;
-  }
-  .aside-partner-table
-    .partners-table
-    .table-row
-    .partner-links
-    .partner-button {
-    margin: 23px 10px 7px;
-  }
-  .aside-partner-table {
-    min-width: unset;
-  }
-  .aside-partner-table
-    .partners-table
-    .table-row
-    .partner-links
-    .partner-button
-    .btn {
-    padding: 8px 10px;
-  }
-  .aside-partner-table .partner-item .partner-logo {
-    margin: 1em 0;
-  }
-  .aside-partner-table .partner-item ul,
-  .aside-partner-table .partner-item .partner-link {
-    display: none;
-  }
-  .aside-partner-table {
-    margin: 20px 0;
-  }
-}
 
-/*! Small Devices, Tablets */
-
-@media only screen and (max-width: 768px) {
   .page-banner {
     padding: 50px 0;
     h1,
@@ -149,35 +134,28 @@
       padding: 0 30px;
     }
   }
-  .articles-grid {
-    padding: 0 30px;
+
+  .review-inner {
+    .aside-partner-table {
+      .partner-item {
+        display: none;
+      }
+    }
+  }
+
+  .item-review-mobile {
+    display: block;
   }
 }
 
 /*! Extra Small Devices, Phones */
-
 @media only screen and (max-width: 480px) {
+  .articles .articles-grid .article-item .article-details {
+    margin: 1em 0;
+    flex-direction: column;
+  }
 }
 
 /*! Custom, iPhone Retina */
-
 @media only screen and (max-width: 320px) {
-}
-
-@media only screen and (min-width: 1100px) {
-  .articles-grid[data-columns]::before {
-    content: '3 .column.column--1of3';
-  }
-}
-
-@media only screen and (max-width: 1099.9px) and (min-width: 768px) {
-  .articles-grid[data-columns]::before {
-    content: '2 .column.column--1of2';
-  }
-}
-
-@media only screen and (max-width: 767.9px) {
-  .articles-grid[data-columns]::before {
-    content: '1 .column.column--1of1';
-  }
 }

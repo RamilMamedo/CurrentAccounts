@@ -14,13 +14,15 @@
       color: #000;
       text-transform: uppercase;
       font-size: $ftz-extra-small;
+      letter-spacing: 0.3px;
     }
     select {
       cursor: pointer;
       position: relative;
       margin-left: 10px;
       color: #666;
-      padding: 6px 62px 6px 14px;
+      padding: 3px 42px 3px 14px;
+      letter-spacing: 1px;
       font-size: $ftz-extra-small;
       background-color: $white;
       border: solid 1px #dedede;
@@ -33,13 +35,12 @@
       top: 50%;
       left: 85%;
       transform: translateY(-50%);
-      display: block;
-      width: 15px;
-      height: 15px;
-      background-image: url('../img/down.svg');
-      background-size: 10px;
-      background-position: 100% 55%;
+      width: 8px;
+      height: 8px;
+      background-image: url(../img/down.svg);
+      background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
       transition: $transition;
     }
     &:focus,
@@ -59,120 +60,113 @@
 */
 
 .index {
-  .sticky-sidebar-parent {
-    .index-main-side {
-      width: 700px;
-      .partners-table {
-        .partners-table--item {
-          .partner-logo,
-          .partner-deposit-options,
-          .partner-info,
-          .partner-button,
-          .partner-logo {
-            text-align: center;
-          }
-          .partner-deposit-options {
-            max-width: 50px;
-            img:first-child {
-              margin-bottom: -12.5px;
-            }
-          }
-          .partner-info {
-            max-width: 165px;
-            font-size: $ftz-normal;
-            color: #4a4a4a;
+  .index-main-side {
+    width: 700px;
+    .partners-table {
+      .partners-table--item {
+        .partner-logo,
+        .partner-deposit-options,
+        .partner-info,
+        .partner-button,
+        .partner-logo {
+          text-align: center;
+        }
+        .partner-deposit-options {
+          max-width: 50px;
+          img:first-child {
+            margin-bottom: -12.5px;
           }
         }
-        .partners-table--item:first-child {
-          position: relative;
-          .editors-pick {
-            display: block;
-            color: $white;
-            text-transform: uppercase;
-            text-indent: 8px;
-            line-height: 18px;
-            font-size: $ftz-extra-small;
-            width: 122px;
-            height: 20px;
-            position: absolute;
-            top: 15px;
-            left: 0;
-            background-image: url('../img/editors-pick.svg');
-            background-repeat: no-repeat;
-          }
+        .partner-info {
+          max-width: 165px;
+          font-size: $ftz-normal;
+          color: #4a4a4a;
         }
       }
-      .index-bottom-text {
-        text-align: justify;
-        font-size: $ftz-normal;
-        color: #3a3a3a;
-        margin: 45px 0px 0 0;
-        h1 {
-          margin-bottom: 20px;
-          font-size: 26px;
-          font-weight: $fw-600;
-        }
-        p {
-          margin-bottom: 1em;
+      .partners-table--item:first-child {
+        position: relative;
+        .editors-pick {
+          display: block;
+          color: $white;
+          text-transform: uppercase;
+          text-indent: 8px;
+          line-height: 18px;
+          font-size: $ftz-extra-small;
+          width: 122px;
+          height: 20px;
+          position: absolute;
+          top: 15px;
+          left: 0;
+          background-image: url('../img/editors-pick.svg');
+          background-repeat: no-repeat;
         }
       }
     }
-    .index-aside {
-      width: 220px;
-      margin-left: 20px;
-      color: #002339;
-      background-color: $white;
-      padding: 21px 0px 18px 0px;
-      hr {
+    .index-bottom-text {
+      text-align: justify;
+      font-size: $ftz-normal;
+      color: #3a3a3a;
+      margin: 45px 0px 0 0;
+      h1 {
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: $fw-600;
       }
-      h4 {
-        margin-left: 14px;
-        margin-right: 10px;
-        font-size: $ftz-small;
-        font-weight: $fw-700;
-        text-transform: uppercase;
+      p {
+        margin-bottom: 1em;
       }
-      .question {
-        h6 {
-          text-indent: 1px;
-          margin-left: 32px;
-          margin-right: 27px;
-          font-size: $ftz-normal;
-          position: relative;
-          .toggle-icon {
-            cursor: pointer;
-            display: block;
-            position: absolute;
-            top: 2px;
-            left: -20px;
-            width: 15px;
-            height: 15px;
-            color: $white;
-            text-align: center;
-            font-size: $ftz-small;
-            line-height: 1;
-            border-radius: 50%;
-            background-color: $blue;
-          }
+    }
+  }
+  .index-aside {
+    width: 220px;
+    margin-left: 20px;
+    color: $text-c;
+    background-color: $white;
+    padding: 21px 0px 18px 0px;
+    h4 {
+      margin: 0 10px 0 14px;
+      font-weight: $fw-700;
+      font-size: $ftz-extra-small;
+      text-transform: uppercase;
+    }
+    .question {
+      h6 {
+        color: #002339;
+        position: relative;
+        text-indent: 1px;
+        margin: 0 20px 0 32px;
+        font-size: $ftz-normal;
+        font-weight: $fw-400;
+        .toggle-icon {
+          cursor: pointer;
+          display: block;
+          position: absolute;
+          top: 5px;
+          left: -20px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          color: $white;
+          line-height: 1;
+          text-align: center;
+          font-size: $ftz-small;
+          background-color: $blue;
         }
+      }
+      p {
+        display: none;
+        color: #4e4d4d;
+        margin: 5px 25px 0 32px;
+        font-size: $ftz-extra-small;
+      }
+      &:first-of-type {
         p {
+          display: block;
+        }
+      }
+      &:last-of-type {
+        hr {
           display: none;
-          margin-left: 32px;
-          margin-right: 27px;
-          margin-top: 5px;
-          text-align: justify;
-          font-size: $ftz-extra-small;
-          color: #4e4d4d;
-        }
-        &:first-of-type {
-          p {
-            display: block;
-          }
-        }
-        &:last-of-type {
-          hr {
-            display: none;
-          }
         }
       }
     }

@@ -12,9 +12,8 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
-    padding: 45px 0 40px;
-    .navbar-logo {
-      width: 220px;
+    padding: 45px 0;
+    .navbar-brand {
       .footer-nav-logo {
         display: inline-block;
         img {
@@ -23,34 +22,32 @@
       }
       .copyright {
         display: block;
-        font-size: 12px;
+        font-size: $ftz-extra-small;
+        font-weight: $fw-300;
         margin-top: 20px;
         text-transform: uppercase;
-        letter-spacing: normal;
-        font-weight: $fw-400;
         text-align: center;
-        color: #47506b;
+        color: $text-c;
       }
     }
     .navbar-nav {
-      padding: 0;
       .footer-nav-item {
         display: inline-block;
         margin-right: 20px;
         .footer-nav-link {
-          color: #3b4561;
+          color: $text-c;
           text-decoration: none;
           text-transform: uppercase;
           font-size: $ftz-small;
-          font-weight: $fw-400;
+          font-weight: $fw-300;
           letter-spacing: 0.5px;
           &:hover {
             text-decoration: underline;
           }
         }
-      }
-      .footer-nav-item:last-child {
-        margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
